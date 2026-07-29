@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1785297911083,
+  "lastUpdated": 1785333346815,
   "repoUrl": "https://github.com/berkslv/dotnet-sdk",
   "entries": {
     "OpenFeature.Benchmark.OpenFeatureClientBenchmarks": [
@@ -731,6 +731,128 @@
             "value": 9801.075627644857,
             "unit": "ns",
             "range": "± 19.61248704916068",
+            "bytesAllocated": 2256
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "username": "berkslv"
+          },
+          "committer": {
+            "username": "berkslv"
+          },
+          "sha": "afc92a488010408d4bac862a47c1e705e1717b65",
+          "message": "ci: add continuous BenchmarkDotNet publishing workflow\n\nAdds a new GitHub Actions workflow that runs the benchmarks in\ntest/OpenFeature.Benchmarks on push to main, daily on a schedule, and\nvia manual dispatch. Results are published to the gh-pages branch\nusing martincostello/benchmarkdotnet-results-publisher for tracking\nperformance over time via a GitHub Pages dashboard.\n\nAlso adds net8.0 to the benchmarks project's target frameworks so the\nexisting SimpleJob(RuntimeMoniker.Net80, baseline: true) benchmark job\ncan build and run in CI.\n\nCloses #625\n\nSigned-off-by: Berk Selvi <berkslv@gmail.com>",
+          "timestamp": "2026-07-29T13:49:21Z",
+          "url": "https://github.com/berkslv/dotnet-sdk/commit/afc92a488010408d4bac862a47c1e705e1717b65"
+        },
+        "date": 1785333346815,
+        "benches": [
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetBooleanValue_WithoutEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9816.160118103027,
+            "unit": "ns",
+            "range": "± 22.81257395542872",
+            "bytesAllocated": 2168
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetBooleanValue_WithEmptyEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9748.093913487026,
+            "unit": "ns",
+            "range": "± 15.52984179650054",
+            "bytesAllocated": 2168
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetBooleanValue_WithEmptyEvaluationContext_WithEmptyFlagEvaluationOptions",
+            "value": 9733.293835449218,
+            "unit": "ns",
+            "range": "± 24.992290636845315",
+            "bytesAllocated": 2168
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetStringValue_WithoutEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9887.854394766,
+            "unit": "ns",
+            "range": "± 14.080396061566898",
+            "bytesAllocated": 2256
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetStringValue_WithEmptyEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9842.609480285644,
+            "unit": "ns",
+            "range": "± 20.525760252222987",
+            "bytesAllocated": 2256
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetStringValue_WithoutEvaluationContext_WithEmptyFlagEvaluationOptions",
+            "value": 9728.9305430821,
+            "unit": "ns",
+            "range": "± 24.486402154954575",
+            "bytesAllocated": 2256
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetIntegerValue_WithoutEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9772.86254295936,
+            "unit": "ns",
+            "range": "± 12.571428856014842",
+            "bytesAllocated": 2240
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetIntegerValue_WithEmptyEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9739.249909464519,
+            "unit": "ns",
+            "range": "± 18.556680367445235",
+            "bytesAllocated": 2240
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetIntegerValue_WithEmptyEvaluationContext_WithEmptyFlagEvaluationOptions",
+            "value": 9617.021436564128,
+            "unit": "ns",
+            "range": "± 23.286804577337918",
+            "bytesAllocated": 2240
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetDoubleValue_WithoutEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9731.73304421561,
+            "unit": "ns",
+            "range": "± 26.542468280295303",
+            "bytesAllocated": 2256
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetDoubleValue_WithEmptyEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9690.768680027553,
+            "unit": "ns",
+            "range": "± 16.943422870008757",
+            "bytesAllocated": 2256
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetDoubleValue_WithEmptyEvaluationContext_WithEmptyFlagEvaluationOptions",
+            "value": 9794.694922892253,
+            "unit": "ns",
+            "range": "± 12.91524961774167",
+            "bytesAllocated": 2256
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetObjectValue_WithoutEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9820.171951293945,
+            "unit": "ns",
+            "range": "± 16.57321009950809",
+            "bytesAllocated": 2256
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetObjectValue_WithEmptyEvaluationContext_WithoutFlagEvaluationOptions",
+            "value": 9853.280947875977,
+            "unit": "ns",
+            "range": "± 60.5331260607164",
+            "bytesAllocated": 2256
+          },
+          {
+            "name": "OpenFeature.Benchmark.OpenFeatureClientBenchmarks.OpenFeatureClient_GetObjectValue_WithEmptyEvaluationContext_WithEmptyFlagEvaluationOptions",
+            "value": 9712.100056966146,
+            "unit": "ns",
+            "range": "± 26.855806990476744",
             "bytesAllocated": 2256
           }
         ]
